@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>QRNAVI – Free QR Code Generator &amp; QR Scanner</title>
+
+  <meta
+    name="description"
+    content="Create free QR codes for URLs, WiFi, text, email, phone numbers, contacts and more. Customize your QR code, download it as PNG, or scan QR codes online with QRNAVI."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <!--
+    Canonical and absolute Open Graph URLs will be added when the
+    final QRNAVI domain is selected. No temporary/fake domain is used.
+  -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="QRNAVI – Free QR Code Generator &amp; QR Scanner">
+  <meta
+    property="og:description"
+    content="Create, customize and download QR codes, or scan QR codes online with QRNAVI."
+  >
+  <meta property="og:site_name" content="QRNAVI">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="QRNAVI – Free QR Code Generator &amp; QR Scanner">
+  <meta
+    name="twitter:description"
+    content="Create, customize and download QR codes, or scan QR codes online with QRNAVI."
+  >
+
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- =========================================================
+       SITE HEADER
+       ========================================================= -->
+  <header class="site-header" id="site-header">
+
+    <div class="container header-inner">
+
+      <a
+        class="site-logo"
+        href="index.html"
+        aria-label="QRNAVI home"
+      >
+        <span class="site-logo-mark" aria-hidden="true">QR</span>
+        <span class="site-logo-text">QRNAVI</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav
+        class="desktop-navigation"
+        id="desktop-navigation"
+        aria-label="Main navigation"
+      >
+        <a href="qr-code-generator.html">QR Generator</a>
+
+        <div class="nav-dropdown">
+          <button
+            class="nav-dropdown-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="qr-tools-dropdown"
+          >
+            QR Tools
+            <span aria-hidden="true">⌄</span>
+          </button>
+
+          <div
+            class="nav-dropdown-menu"
+            id="qr-tools-dropdown"
+            hidden
+          >
+            <a href="url-to-qr-code.html">URL QR Code</a>
+            <a href="wifi-qr-code.html">WiFi QR Code</a>
+            <a href="text-to-qr-code.html">Text QR Code</a>
+            <a href="email-to-qr-code.html">Email QR Code</a>
+            <a href="phone-to-qr-code.html">Phone QR Code</a>
+            <a href="sms-qr-code.html">SMS QR Code</a>
+            <a href="vcard-qr-code.html">vCard QR Code</a>
+            <a href="whatsapp-qr-code.html">WhatsApp QR Code</a>
+            <a href="instagram-qr-code.html">Instagram QR Code</a>
+            <a href="location-qr-code.html">Location QR Code</a>
+          </div>
+        </div>
+
+        <a href="qr-code-scanner.html">Scanner</a>
+        <a href="guides.html">Guides</a>
+        <a href="faq.html">FAQ</a>
+
+        <a
+          class="header-cta"
+          href="qr-code-generator.html"
+        >
+          Create QR
+        </a>
+      </nav>
+
+      <!-- Mobile Header Actions -->
+      <div class="mobile-header-actions">
+
+        <a
+          class="mobile-scanner-link"
+          href="qr-code-scanner.html"
+          aria-label="Open QR scanner"
+        >
+          <span class="scanner-icon" aria-hidden="true">⌕</span>
+        </a>
+
+        <button
+          class="mobile-menu-toggle"
+          id="mobile-menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div
+      class="mobile-navigation-wrapper"
+      id="mobile-navigation-wrapper"
+      hidden
+    >
+      <nav
+        class="mobile-navigation"
+        id="mobile-navigation"
+        aria-label="Mobile navigation"
+      >
+
+        <a
+          class="mobile-navigation-primary"
+          href="qr-code-generator.html"
+        >
+          QR Code Generator
+        </a>
+
+        <div class="mobile-navigation-group">
+          <button
+            class="mobile-navigation-group-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-qr-tools"
+          >
+            <span>QR Tools</span>
+            <span aria-hidden="true">+</span>
+          </button>
+
+          <div
+            class="mobile-navigation-submenu"
+            id="mobile-qr-tools"
+            hidden
+          >
+            <a href="url-to-qr-code.html">URL QR Code</a>
+            <a href="wifi-qr-code.html">WiFi QR Code</a>
+            <a href="text-to-qr-code.html">Text QR Code</a>
+            <a href="email-to-qr-code.html">Email QR Code</a>
+            <a href="phone-to-qr-code.html">Phone QR Code</a>
+            <a href="sms-qr-code.html">SMS QR Code</a>
+            <a href="vcard-qr-code.html">vCard QR Code</a>
+            <a href="whatsapp-qr-code.html">WhatsApp QR Code</a>
+            <a href="instagram-qr-code.html">Instagram QR Code</a>
+            <a href="location-qr-code.html">Location QR Code</a>
+          </div>
+        </div>
+
+        <div class="mobile-navigation-links">
+          <a href="qr-code-scanner.html">QR Scanner</a>
+          <a href="guides.html">Guides</a>
+          <a href="faq.html">FAQ</a>
+          <a href="about.html">About QRNAVI</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+      </nav>
+    </div>
+
+  </header>
+
+
+  <!-- =========================================================
+       MAIN CONTENT
+       ========================================================= -->
+  <main id="main-content">
+
+    <!-- =======================================================
+         HERO
+         ======================================================= -->
+    <section class="hero-section" aria-labelledby="hero-title">
+
+      <div class="container hero-container">
+
+        <div class="hero-content">
+
+          <p class="eyebrow">Simple. Fast. Free QR Tools.</p>
+
+          <h1 id="hero-title">
+            Free QR Code Generator &amp; QR Scanner
+          </h1>
+
+          <p class="hero-description">
+            Create QR codes for websites, WiFi, text, email, contacts,
+            phone numbers and more. Customize your QR code and download
+            it as a PNG, or scan a QR code directly from your device.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              class="button button-primary"
+              href="qr-code-generator.html"
+            >
+              Create QR Code
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="qr-code-scanner.html"
+            >
+              Scan QR Code
+            </a>
+
+          </div>
+
+          <p class="hero-note">
+            Designed for a fast and easy experience on phones and desktops.
+          </p>
+
+        </div>
+
+        <div
+          class="hero-visual"
+          aria-label="QRNAVI QR code generator preview"
+        >
+          <div class="hero-qr-card">
+
+            <div class="hero-qr-header">
+              <span class="hero-qr-label">QRNAVI</span>
+              <span class="hero-qr-status">Ready</span>
+            </div>
+
+            <div
+              class="hero-qr-placeholder"
+              aria-hidden="true"
+            >
+              <span class="qr-placeholder-corner corner-top-left"></span>
+              <span class="qr-placeholder-corner corner-top-right"></span>
+              <span class="qr-placeholder-corner corner-bottom-left"></span>
+
+              <span class="qr-placeholder-pattern">
+                QR
+              </span>
+            </div>
+
+            <div class="hero-qr-footer">
+              <span>Customize</span>
+              <span>Download PNG</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         QR TOOLS
+         ======================================================= -->
+    <section
+      class="tools-section section"
+      id="qr-tools"
+      aria-labelledby="tools-title"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">QR Code Tools</p>
+
+          <h2 id="tools-title">
+            Create a QR Code for Any Purpose
+          </h2>
+
+          <p>
+            Choose the type of information you want to share and create
+            a QR code with the right format for your use case.
+          </p>
+
+        </div>
+
+        <div class="tools-grid">
+
+          <a
+            class="tool-card"
+            href="url-to-qr-code.html"
+          >
+            <span class="tool-card-icon" aria-hidden="true">↗</span>
+            <span class="tool-card-content">
+              <strong>URL QR Code</strong>
+              <span>Create a QR code for a website or web page.</span>
+            </span>
+            <span class="tool-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a
+            class="tool-card"
+            href="wifi-qr-code.html"
+          >
+            <span class="tool-card-icon" aria-hidden="true">⌁</span>
+            <span class="tool-card-content">
+              <strong>WiFi QR Code</strong>
+              <span>Share WiFi connection details quickly.</span>
+            </span>
+            <span class="tool-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a
+            class="tool-card"
+            href="text-to-qr-code.html"
+          >
+            <span class="tool-card-icon" aria-hidden="true">T</span>
+            <span class="tool-card-content">
+              <strong>Text QR Code</strong>
+              <span>Turn plain or multiline text into a QR code.</span>
+            </span>
+            <span class="tool-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a
+            class="tool-card"
+            href="email-to-qr-code.html"
+          >
+            <span class="tool-card-icon" aria-hidden="true">@</span>
+            <span class="tool-card-content">
+              <strong>Email QR Code</strong>
+              <span>Create a QR code containing email details.</span>
+            </span>
+            <span class="tool-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a
+            class="tool-card"
+            href="phone-to-qr-code.html"
+          >
+            <span class="tool-card-icon" aria-hidden="true">☎</span>
+            <span class="tool-card-content">
+              <strong>Phone QR Code</strong>
+              <span>Make a QR code for a phone number.</span>
+            </span>
+            <span class="tool-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a
+            class="tool-card"
+            href="sms-qr-code.html"
+          >
+            <span class="tool-card-icon" aria-hidden="true">✉</span>
+            <span class="tool-card-content">
+              <strong>SMS QR Code</strong>
+              <span>Create a QR code with a phone number and message.</span>
+            </span>
+            <span class="tool-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a
+            class="tool-card"
+            href="vcard-qr-code.html"
+          >
+            <span class="tool-card-icon" aria-hidden="true">V</span>
+            <span class="tool-card-content">
+              <strong>vCard QR Code</strong>
+              <span>Share contact information through a QR code.</span>
+            </span>
+            <span class="tool-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a
+            class="tool-card"
+            href="whatsapp-qr-code.html"
+          >
+            <span class="tool-card-icon" aria-hidden="true">W</span>
+            <span class="tool-card-content">
+              <strong>WhatsApp QR Code</strong>
+              <span>Make a QR code for a WhatsApp conversation.</span>
+            </span>
+            <span class="tool-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a
+            class="tool-card"
+            href="instagram-qr-code.html"
+          >
+            <span class="tool-card-icon" aria-hidden="true">◎</span>
+            <span class="tool-card-content">
+              <strong>Instagram QR Code</strong>
+              <span>Share an Instagram profile through a QR code.</span>
+            </span>
+            <span class="tool-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a
+            class="tool-card"
+            href="location-qr-code.html"
+          >
+            <span class="tool-card-icon" aria-hidden="true">⌖</span>
+            <span class="tool-card-content">
+              <strong>Location QR Code</strong>
+              <span>Share a geographic location with a QR code.</span>
+            </span>
+            <span class="tool-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+        </div>
+
+        <div class="section-action">
+          <a
+            class="text-link"
+            href="qr-code-generator.html"
+          >
+            Explore the full QR Code Generator
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         MAIN GENERATOR CTA
+         ======================================================= -->
+    <section
+      class="generator-cta-section section"
+      aria-labelledby="generator-cta-title"
+    >
+
+      <div class="container">
+
+        <div class="generator-cta-card">
+
+          <div class="generator-cta-content">
+
+            <p class="eyebrow">QRNAVI Generator</p>
+
+            <h2 id="generator-cta-title">
+              Create Your QR Code in Seconds
+            </h2>
+
+            <p>
+              Start with the QR type you need, enter your information,
+              customize the design and download your finished QR code.
+            </p>
+
+          </div>
+
+          <a
+            class="button button-primary"
+            href="qr-code-generator.html"
+          >
+            Open QR Generator
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         WHY QRNAVI
+         ======================================================= -->
+    <section
+      class="benefits-section section"
+      aria-labelledby="benefits-title"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">Why QRNAVI</p>
+
+          <h2 id="benefits-title">
+            QR Tools Built for a Simple Experience
+          </h2>
+
+          <p>
+            QRNAVI focuses on making QR code creation and scanning
+            straightforward without unnecessary complexity.
+          </p>
+
+        </div>
+
+        <div class="benefits-grid">
+
+          <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true">⚡</div>
+            <h3>Fast</h3>
+            <p>
+              Generate QR codes quickly with a lightweight interface
+              designed for everyday use.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true">✓</div>
+            <h3>Easy to Use</h3>
+            <p>
+              Clear forms and focused tools make it easy to create
+              the QR code you need.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true">▣</div>
+            <h3>Customizable</h3>
+            <p>
+              Customize supported QR designs while keeping scan
+              reliability in mind.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true">▱</div>
+            <h3>Mobile Friendly</h3>
+            <p>
+              QRNAVI is designed to work comfortably across phones,
+              tablets and desktop screens.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true">↓</div>
+            <h3>PNG Download</h3>
+            <p>
+              Download generated QR codes as PNG files for convenient
+              everyday use.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true">◉</div>
+            <h3>Privacy-Focused</h3>
+            <p>
+              QRNAVI is designed to generate supported QR content
+              directly in the browser where practical.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         HOW IT WORKS
+         ======================================================= -->
+    <section
+      class="steps-section section"
+      aria-labelledby="steps-title"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">How It Works</p>
+
+          <h2 id="steps-title">
+            How to Create a QR Code
+          </h2>
+
+          <p>
+            Creating a QR code with QRNAVI follows a simple four-step process.
+          </p>
+
+        </div>
+
+        <ol class="steps-list">
+
+          <li class="step-card">
+            <span class="step-number" aria-hidden="true">01</span>
+            <div>
+              <h3>Choose a QR Type</h3>
+              <p>
+                Select URL, WiFi, text, email, contact or another
+                supported QR format.
+              </p>
+            </div>
+          </li>
+
+          <li class="step-card">
+            <span class="step-number" aria-hidden="true">02</span>
+            <div>
+              <h3>Enter Your Information</h3>
+              <p>
+                Add the information that you want to encode into
+                your QR code.
+              </p>
+            </div>
+          </li>
+
+          <li class="step-card">
+            <span class="step-number" aria-hidden="true">03</span>
+            <div>
+              <h3>Customize Your QR Code</h3>
+              <p>
+                Adjust supported colors, patterns, templates and
+                other design settings.
+              </p>
+            </div>
+          </li>
+
+          <li class="step-card">
+            <span class="step-number" aria-hidden="true">04</span>
+            <div>
+              <h3>Download Your QR Code</h3>
+              <p>
+                Download the current QR code design as a PNG file.
+              </p>
+            </div>
+          </li>
+
+        </ol>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         QR SCANNER
+         ======================================================= -->
+    <section
+      class="scanner-section section"
+      aria-labelledby="scanner-title"
+    >
+
+      <div class="container">
+
+        <div class="scanner-card">
+
+          <div class="scanner-content">
+
+            <p class="eyebrow">QR Scanner</p>
+
+            <h2 id="scanner-title">
+              Scan a QR Code Online
+            </h2>
+
+            <p>
+              Use your device camera to scan a QR code directly in
+              your browser. QRNAVI can process website URLs and
+              other supported QR content safely.
+            </p>
+
+            <ul class="feature-list">
+              <li>Camera-based QR scanning</li>
+              <li>Supported camera switching</li>
+              <li>Flashlight support where available</li>
+              <li>Copy scanned information</li>
+            </ul>
+
+            <a
+              class="button button-primary"
+              href="qr-code-scanner.html"
+            >
+              Open QR Scanner
+            </a>
+
+          </div>
+
+          <div
+            class="scanner-visual"
+            aria-hidden="true"
+          >
+            <div class="scanner-frame">
+              <span class="scanner-corner scanner-corner-tl"></span>
+              <span class="scanner-corner scanner-corner-tr"></span>
+              <span class="scanner-corner scanner-corner-bl"></span>
+              <span class="scanner-corner scanner-corner-br"></span>
+              <span class="scanner-line"></span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         GUIDES
+         ======================================================= -->
+    <section
+      class="guides-section section"
+      aria-labelledby="guides-title"
+    >
+
+      <div class="container">
+
+        <div class="section-heading section-heading-with-action">
+
+          <div>
+
+            <p class="eyebrow">QR Knowledge</p>
+
+            <h2 id="guides-title">
+              QR Code Guides
+            </h2>
+
+            <p>
+              Learn how QR codes work, how to create and scan them,
+              and how to use them effectively.
+            </p>
+
+          </div>
+
+          <a
+            class="text-link"
+            href="guides.html"
+          >
+            View all guides
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </div>
+
+        <div class="guides-grid">
+
+          <a
+            class="guide-card"
+            href="guides.html"
+          >
+            <span class="guide-card-number" aria-hidden="true">01</span>
+            <span class="guide-card-content">
+              <strong>How QR Codes Work</strong>
+              <span>
+                Understand the basics behind QR codes and scanning.
+              </span>
+            </span>
+            <span class="guide-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a
+            class="guide-card"
+            href="guides.html"
+          >
+            <span class="guide-card-number" aria-hidden="true">02</span>
+            <span class="guide-card-content">
+              <strong>How to Make a QR Code</strong>
+              <span>
+                Learn the basic process for creating a useful QR code.
+              </span>
+            </span>
+            <span class="guide-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a
+            class="guide-card"
+            href="guides.html"
+          >
+            <span class="guide-card-number" aria-hidden="true">03</span>
+            <span class="guide-card-content">
+              <strong>How to Scan a QR Code</strong>
+              <span>
+                Learn how to scan QR codes using supported devices.
+              </span>
+            </span>
+            <span class="guide-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a
+            class="guide-card"
+            href="guides.html"
+          >
+            <span class="guide-card-number" aria-hidden="true">04</span>
+            <span class="guide-card-content">
+              <strong>Static vs Dynamic QR Codes</strong>
+              <span>
+                Understand the difference between common QR code types.
+              </span>
+            </span>
+            <span class="guide-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         FAQ
+         ======================================================= -->
+    <section
+      class="faq-section section"
+      aria-labelledby="homepage-faq-title"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">FAQ</p>
+
+          <h2 id="homepage-faq-title">
+            Frequently Asked Questions
+          </h2>
+
+          <p>
+            Find quick answers to common questions about QR codes
+            and QRNAVI.
+          </p>
+
+        </div>
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>
+              <span>What is a QR code?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                A QR code is a two-dimensional code that can store
+                information such as a website address, text, contact
+                details or WiFi connection information.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Can I create a QR code for free?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                QRNAVI is designed to provide free QR code creation
+                tools for the supported QR types available on the site.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Can I customize my QR code?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Yes. QRNAVI's planned customization editor supports
+                options such as colors, patterns, templates and
+                other supported design settings.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>How can I scan a QR code?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Open the QRNAVI QR Scanner, allow camera access when
+                requested, and point the camera at the QR code.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Can I download my QR code?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Yes. The QR generator is planned to provide PNG
+                downloads using the current QR content and
+                customization settings.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Does a static QR code expire?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                A static QR code stores its information directly in
+                the code. QRNAVI's V1 focuses on static QR generation;
+                dynamic QR features may be added separately in the future.
+              </p>
+            </div>
+          </details>
+
+        </div>
+
+        <div class="section-action">
+          <a
+            class="text-link"
+            href="faq.html"
+          >
+            View all QRNAVI FAQs
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         FINAL CTA
+         ======================================================= -->
+    <section
+      class="final-cta-section section"
+      aria-labelledby="final-cta-title"
+    >
+
+      <div class="container">
+
+        <div class="final-cta-card">
+
+          <div>
+
+            <p class="eyebrow">QRNAVI</p>
+
+            <h2 id="final-cta-title">
+              Ready to Create Your QR Code?
+            </h2>
+
+            <p>
+              Choose a QR tool and create your code in a few simple steps.
+            </p>
+
+          </div>
+
+          <div class="final-cta-actions">
+
+            <a
+              class="button button-primary"
+              href="qr-code-generator.html"
+            >
+              Create QR Code
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="qr-code-scanner.html"
+            >
+              Scan QR Code
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-main">
+
+        <div class="footer-brand">
+
+          <a
+            class="footer-logo"
+            href="index.html"
+            aria-label="QRNAVI home"
+          >
+            <span class="site-logo-mark" aria-hidden="true">QR</span>
+            <span class="site-logo-text">QRNAVI</span>
+          </a>
+
+          <p>
+            Free QR code tools for creating, customizing and scanning
+            QR codes.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h2>QR Tools</h2>
+
+          <ul>
+            <li><a href="qr-code-generator.html">QR Generator</a></li>
+            <li><a href="url-to-qr-code.html">URL QR Code</a></li>
+            <li><a href="wifi-qr-code.html">WiFi QR Code</a></li>
+            <li><a href="text-to-qr-code.html">Text QR Code</a></li>
+            <li><a href="email-to-qr-code.html">Email QR Code</a></li>
+            <li><a href="phone-to-qr-code.html">Phone QR Code</a></li>
+            <li><a href="sms-qr-code.html">SMS QR Code</a></li>
+            <li><a href="vcard-qr-code.html">vCard QR Code</a></li>
+          </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h2>More Tools</h2>
+
+          <ul>
+            <li><a href="whatsapp-qr-code.html">WhatsApp QR Code</a></li>
+            <li><a href="instagram-qr-code.html">Instagram QR Code</a></li>
+            <li><a href="location-qr-code.html">Location QR Code</a></li>
+            <li><a href="qr-code-scanner.html">QR Scanner</a></li>
+            <li><a href="guides.html">Guides</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h2>QRNAVI</h2>
+
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p>
+          &copy; <span id="current-year">2026</span> QRNAVI.
+          All rights reserved.
+        </p>
+
+        <p>
+          Free QR Code tools for creating and scanning QR codes.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
